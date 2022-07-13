@@ -1,0 +1,30 @@
+{
+  "name": "demo-social-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguel-armas-unmsm/demo-social-network.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miguel-armas-unmsm/demo-social-network/issues"
+  },
+  "homepage": "https://github.com/miguel-armas-unmsm/demo-social-network#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "nanoid": "^4.0.0",
+    "swagger-ui-express": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0"
+  }
+}
