@@ -32,8 +32,7 @@ function getToken(authorization) {
     throw error('Invalid format', 401);
   }
 
-  let token = authorization.replace('Bearer ', '');
-  return token;
+  return authorization.replace( 'Bearer ', '' );
 }
 
 function verifyToken(token) {

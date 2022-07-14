@@ -1,8 +1,8 @@
 const auth = require('../auth');
-const TABLE = 'user';
+const TABLE = 'users';
 
 module.exports = function(injectedStore) {
-  if (!injectedStore) injectedStore = require('../../../store/dummy');
+  if (!injectedStore) injectedStore = require('../../../store/mysql');
   
   function findAll() {
     return injectedStore.findAll(TABLE);
@@ -18,11 +18,14 @@ module.exports = function(injectedStore) {
       username: body.username,
     }
 
-    user.id = body.id ? body.id : '' + Math.floor((Math.random() * 10000) );
+    if(body.id) {
+      user.id = body.id;
+    }
+
+    // user.id = body.id ? body.id : '' + Math.floor((Math.random() * 10000) );
     
     if(body.password || body.username) {
       await auth.save({
-        id: user.id,
         username: body.username,
         password: body.password,
       });

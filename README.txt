@@ -7,7 +7,8 @@ $ npm i nanoid // generador de id
 $ npm i body-parser // analizar body como json
 $ npm i swagger-ui-express // swagger
 $ npm i jsonwebtoken // jwt
-$ npm i bcrypt
+$ npm i bcrypt // para encriptar contraseña
+$ npm i mysql
 
 Ejecutar proyecto:
 $ node api/index.js
