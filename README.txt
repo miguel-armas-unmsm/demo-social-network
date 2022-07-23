@@ -9,6 +9,7 @@ $ npm i swagger-ui-express // swagger
 $ npm i jsonwebtoken // jwt
 $ npm i bcrypt // para encriptar contraseña
 $ npm i mysql
+$ npm i request // para conexión http
 
 Ejecutar proyecto:
 $ node api/index.js

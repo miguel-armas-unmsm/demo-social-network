@@ -13,6 +13,10 @@ const check = {
     if(decoded.id !== owner) {
       throw error('You do not have permissions to execute this action', 401);
     }
+  },
+
+  logged: function(req, owner) {
+    decodeHeader(req);
   }
 }
 

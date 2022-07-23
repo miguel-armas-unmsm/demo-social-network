@@ -38,11 +38,27 @@ module.exports = function(injectedStore) {
     injectedStore.deleteById(TABLE, id);
   }
 
+  function follow(from, to) {
+    return injectedStore.save(TABLE + '_follows', {
+      user_from: from,
+      user_to: to,
+    })
+  }
+
+  async function following(user) {
+    const join = {};
+    join[TABLE] = 'user_to'; // {user: user_to}
+    const query = {user_from: user};
+    return await injectedStore.query(TABLE + '_follows', query, join);
+  }
+
   return {
     findAll,
     findById,
     save,
-    deleteById,  
+    deleteById,
+    follow,
+    following,
   };
 }
 

@@ -11,4 +11,8 @@ module.exports = {
         password: process.env.MYSQL_PASS || 'oracle12c',
         database: process.env.MYSQL_DB || 'db_social_network',
     },
+    mysqlService: {
+        port: process.env.MYSQ_SERVICE_PORT || 3001,
+        host: process.env.MYSQ_SERVICE_PORT || 'localhost',
+    }
 }
