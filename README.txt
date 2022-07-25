@@ -8,6 +8,7 @@ $ npm i body-parser // analizar body como json
 $ npm i swagger-ui-express // swagger
 $ npm i jsonwebtoken // jwt
 $ npm i bcrypt // para encriptar contraseña
+$ npm i bcryptjs
 $ npm i mysql
 $ npm i request // para conexión http
 $ npm i -g pm2 // monitoreo de servicios
