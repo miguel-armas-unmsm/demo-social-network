@@ -1,11 +1,11 @@
 {
   "version": 2,
   "builds": [{
-    "src": "./api/index.js",
+    "src": "api/index.js",
     "use": "@vercel/node"
   },
     {
-      "src": "./post/index-post.js",
+      "src": "post/index-post.js",
       "use": "@vercel/node"
     }
   ],
@@ -14,11 +14,11 @@
     "dest": "/api/index.js"
   },
     {
-      "src": "/api/users(.*)",
+      "src": "/api/user(.*)",
       "dest": "/api/index.js"
     },
     {
-      "src": "/api/posts(.*)",
+      "src": "/api/post(.*)",
       "dest": "/post/index.js"
     }
   ]
